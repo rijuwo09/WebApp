@@ -3,49 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Web-App</title>
+    <title>Mein ÖPNV Ticket-Manager</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app">
-        <header>
-            <h1>Meine Web-App</h1>
-            <button class="settings-button" onclick="openSettings()">⚙️</button>
-        </header>
-        <main>
-            <nav>
-                <button onclick="showPage('karte')">Karte</button>
-                <button onclick="showPage('tickets')">Tickets</button>
-                <button onclick="showPage('account')">Mein Account</button>
-            </nav>
-            <section id="karte" class="page">
-                <h2>Karte</h2>
-                <div id="map"></div>
-            </section>
-            <section id="tickets" class="page" style="display: none;">
-                <h2>Tickets</h2>
-                <div class="ticket-categories">
-                    <button onclick="showTickets()">Einzelfahrt</button>
-                    <button onclick="showTickets()">Tageskarte</button>
-                    <button onclick="showTickets()">Monatskarte</button>
-                    <button onclick="showTickets()">Deutschlandticket</button>
-                    <button onclick="showTickets()">Quer durchs Land Ticket</button>
-                    <button onclick="showTickets()">Ländertickets</button>
-                </div>
-                <div id="my-tickets" style="display: none;">
-                    <h3>Meine Tickets</h3>
-                    <div class="ticket-stack">
-                        <div class="ticket">Einzelfahrkarte zwischen Frankfurt HBF und Lenzen (Elbe)</div>
-                        <div class="ticket">Mehr Tickets hast du nicht buchen?</div>
-                    </div>
-                </div>
-            </section>
-            <section id="account" class="page" style="display: none;">
-                <h2>Mein Account</h2>
-                <!-- Account Informationen werden später hinzugefügt -->
-            </section>
-        </main>
-    </div>
+    <header>
+        <div class="container">
+            <h1>Mein ÖPNV Ticket-Manager</h1>
+            <button id="settings-button">⚙️</button>
+        </div>
+    </header>
+    <main>
+        <section id="nav">
+            <button class="nav-button" data-target="karte">Karte</button>
+            <button class="nav-button" data-target="tickets">Tickets</button>
+            <button class="nav-button" data-target="account">Mein Account</button>
+        </section>
+        <section id="content">
+            <!-- Inhalt wird hier dynamisch geladen -->
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
